@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Simulator - CyberSafe Teens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav-header">
+    <div class="nav-brand">CyberSafe Teens</div>
+    <div class="nav-right">
+      <span id="mode-pill" class="mode-pill">Mode: Beginner</span>
+      <button class="secondary-btn" onclick="toggleMode()">Switch Mode</button>
+      <div class="nav-links">
+        <a id="home-link" class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="score.html">Score</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="phishing-page">
+    <div class="phishing-card card">
+      <h1>Phishing Email Simulator</h1>
+      <p>Read each message and choose whether it is Safe or Phishing.</p>
+      <div class="level-row"><span id="scenario-level" class="level-pill">Level 1</span><span id="hacker-mike" class="hacker-mike">Hacker Mike is watching your choices...</span></div>
+      <div id="phishing-progress" class="progress-row"><div id="phishing-progress-text">0/5 threats detected</div><div class="progress-bar"><div id="phishing-progress-fill"></div></div></div>
+      <div id="phishing-scenario" class="email-card">
+        <div id="email-from" class="email-from"></div>
+        <div id="email-subject" class="email-subject"></div>
+        <div id="email-body" class="email-body"></div>
+      </div>
+      <div class="button-row">
+        <button class="primary-btn" onclick="submitPhishing(false)">Safe</button>
+        <button class="primary-btn" onclick="submitPhishing(true)">Phishing</button>
+      </div>
+      <div id="phishing-feedback" class="feedback"></div>
+      <div id="phishing-details" class="feedback"></div>
+      <div class="footer-row">
+        <button class="secondary-btn" onclick="nextPhishingScenario()">Next Scenario</button>
+        <a class="secondary-btn" href="score.html">View Score</a>
+        <a class="secondary-btn" href="index.html">Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">© 2026 CyberSafe Teens Prototype. All rights reserved.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

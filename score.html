@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Dashboard - CyberSafe Teens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav-header">
+    <div class="nav-brand">CyberSafe Teens</div>
+    <div class="nav-right">
+      <span id="mode-pill" class="mode-pill">Mode: Beginner</span>
+      <button class="secondary-btn" onclick="toggleMode()">Switch Mode</button>
+      <div class="nav-links">
+        <a id="home-link" class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="quiz.html">Quiz</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="score-page">
+    <div class="score-card card">
+      <h1>Cyber Safety Score</h1>
+      <p>Your overall risk level based on recent exercises.</p>
+      <div class="score-display"><span id="score-number">0%</span></div>
+      <div class="progress-bar"><div id="score-fill"></div></div>
+      <div id="risk-level" class="risk-level">Risk: Unknown</div>
+      <div id="badge-box" class="badge-box"></div>
+      <div class="score-breakdown card">
+        <h3>Breakdown</h3>
+        <div id="breakdown-list"></div>
+      </div>
+      <div class="footer-row">
+        <a class="primary-btn" href="index.html">Back Home</a>
+        <button class="secondary-btn" onclick="updateScoreDashboard()">Refresh Score</button>
+        <button class="secondary-btn" onclick="resetScoreboard()">Reset Score</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">© 2026 CyberSafe Teens Prototype. All rights reserved.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

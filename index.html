@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSafe Teens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav-header">
+    <div class="nav-brand">CyberSafe Teens</div>
+    <div class="nav-right">
+      <span id="mode-pill" class="mode-pill">Mode: Beginner</span>
+      <button id="mode-switch-btn" class="secondary-btn" onclick="toggleMode()">Switch Mode</button>
+      <div class="nav-links">
+        <a id="home-link" class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="score.html">Scoreboard</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero-page">
+    <div id="mode-screen" class="mode-card card">
+      <div class="brand">CyberSafe Teens</div>
+      <h1>Choose Your Track</h1>
+      <p>Start in beginner mode for guided lessons or hacker mode for advanced challenges.</p>
+      <div class="button-grid">
+        <button class="glow-btn" onclick="setMode('beginner')">Beginner Mode</button>
+        <button id="hacker-btn" class="glow-btn" onclick="setMode('hacker')">Hacker Mode</button>
+      </div>
+      <div id="hacker-unlock-label" class="unlock-label locked">Hacker Mode Locked - complete beginner quiz</div>
+    </div>
+
+    <div id="beginner-home" class="hero-card" style="display:none;">
+      <div class="brand">Beginner Mode</div>
+      <h1>CyberSafe Dashboard</h1>
+      <p>Welcome to beginner mode: interactive quiz, password game, phishing simulation, and quick safety tips.</p>
+      <div class="button-grid">
+        <a class="glow-btn" href="quiz.html">Quiz</a>
+        <a class="glow-btn" href="password.html">Password Game</a>
+        <a class="glow-btn" href="phishing.html">Phishing Simulator</a>
+      </div>
+      <div id="phishing-badge" class="badge">🔔 Take a phishing scenario to earn a badge</div>
+      <div id="tips-bottom" class="tips-bottom">
+        <h2>Quick Safety Tips</h2>
+        <ul>
+          <li>Always check the sender’s email domain.</li>
+          <li>Never give passwords in email responses.</li>
+          <li>Hover over links before clicking them.</li>
+          <li>Use 2FA and strong passphrases.</li>
+        </ul>
+      </div>
+      <div class="home-panels">
+        <div class="mini-card"><strong>🎯 Goal</strong><p>Learn foundation cybersecurity habits with easy steps.</p></div>
+        <div class="mini-card"><strong>🧭 Path</strong><p>Complete quizzes, strengthen passwords, and detect scams.</p></div>
+        <div class="mini-card"><strong>🏅 Progress</strong><p>Earn badges and track your safety score on the dashboard.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">© 2026 CyberSafe Teens Prototype. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

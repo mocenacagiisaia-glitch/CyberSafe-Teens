@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - CyberSafe Teens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav-header">
+    <div class="nav-brand">CyberSafe Teens</div>
+    <div class="nav-right">
+      <span id="mode-pill" class="mode-pill">Mode: Beginner</span>
+      <button class="secondary-btn" onclick="toggleMode()">Switch Mode</button>
+      <div class="nav-links">
+        <a id="home-link" class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="score.html">Score</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="quiz-page">
+    <div class="quiz-card card">
+      <h1>Cyber Quiz</h1>
+      <div class="progress-row">
+        <div id="progress-text">Question 1 / 1</div>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+      </div>
+      <div id="question-number" class="question-header"></div>
+      <div id="question-text" class="question-text"></div>
+      <div id="answer-buttons" class="answer-buttons"></div>
+      <div id="feedback" class="feedback"></div>
+      <button id="next-btn" class="primary-btn" onclick="nextQuestion()" disabled>Next Question</button>
+      <div id="quiz-result" class="result"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">© 2026 CyberSafe Teens Prototype. All rights reserved.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
